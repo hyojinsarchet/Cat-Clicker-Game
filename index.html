@@ -25,10 +25,14 @@
     <img id="cat_img" src="cat.jpg">
     <p id="counts"></p>
     <script>
+	var counts = 0
     $(function(){
-        var counts = $('#counts').text(0);
+		$('#counts').text(0)
         $('#cat_img').click(function(e){
+		    counts = parseInt($('#counts').text());
+			console.log(counts);
             counts++;
+			$('#counts').text(counts)
             return counts;
         });
     });
