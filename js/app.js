@@ -53,7 +53,7 @@ var Cat = function(data) {
         return "Teenager"
       }
   });
-
+};
 
 var viewModel = function() {
     this.catList = ko.observableArray([]);
@@ -65,11 +65,11 @@ var viewModel = function() {
     this.currentCat = ko.observable(this.catList()[0]);
 
     this.incrementCounter = function() {
-      this.clickCount(that.clickCount() + 1);
+      this.clickCount(this.clickCount() + 1);
   };
 
     this.setCat = function(clickedCat) {
-        this.currentCat(clickedCat);
+        self.currentCat(clickedCat);
     };
 };
 
